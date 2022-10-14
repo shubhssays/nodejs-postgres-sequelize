@@ -15,11 +15,11 @@
   "version": "1.0.0",
   "description": "Basic Node Js Postgresql Sequelize Setup",
   "main": "app.js",
-  "migrate":"sequelize db:migrate",
-  "create-migration-file":"sequelize migration:create --name",
   "scripts": {
     "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "npx sequelize-cli db:migrate",
+    "create-migration-file": "npx sequelize-cli migration:create --name"
   },
   "author": "Shubham Kumar Shukla",
   "license": "ISC"

@@ -19,7 +19,7 @@
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "migrate": "npx sequelize-cli db:migrate",
-    "create-migration-file": "npx sequelize-cli migration:create --name"
+    "create-migration": "npx sequelize-cli migration:create --name"
   },
   "author": "Shubham Kumar Shukla",
   "license": "ISC"

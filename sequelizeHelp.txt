@@ -45,8 +45,6 @@ const dbConnect = {
 module.exports = dbConnect;
 
 
-module.exports = creds;
-
 7. add below in .env file
 
 PORT=3000
@@ -74,10 +72,16 @@ DEV_DB_PASSWORD=shubhs
 # PRODUCTION_DB_USER=postgres
 # PRODUCTION_DB_PASSWORD=shubhs
 
-8. To create migration file
+
+8. Add below scripts to package.json
+
+"migrate": "npx sequelize-cli db:migrate",
+"create-migration": "npx sequelize-cli migration:create --name"
+
+9. To create migration file
 
    npm run create-migration filename-without-space
 
-9. To run migration
+10. To run migration
 
-   sequelize db:migrate 
+   npm run migrate

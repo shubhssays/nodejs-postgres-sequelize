@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const UserVerificationCodes = sequelize.define("user_verification_codes", {
+  const userVerificationCodes = sequelize.define("user_verification_codes", {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -42,12 +42,12 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
 
-  UserVerificationCodes.assosiate = function (models) {
-    UserRoles.belongsTo(models.Users, {
-      foreignKey: "users",
+  userVerificationCodes.assosiate = function (models) {
+    userVerificationCodes.belongsTo(models.users, {
+      foreignKey: "user_id",
       targetKey: "id",
     });
   };
 
-  return UserVerificationCodes;
+  return userVerificationCodes;
 };

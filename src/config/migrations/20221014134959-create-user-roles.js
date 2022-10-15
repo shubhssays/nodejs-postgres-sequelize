@@ -32,22 +32,16 @@ module.exports = {
         default: true,
         type: Sequelize.BOOLEAN,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
-        type: Sequelize.DATE,
+        defaultValue: Sequelize.fn('now'),
+        type: Sequelize.DATE
       },
-      created_by: {
+      updatedAt: {
         allowNull: false,
-        type: Sequelize.STRING,
-      },
-      updated_at: {
-        allowNull: true,
-        type: Sequelize.DATE,
-      },
-      updated_by: {
-        allowNull: true,
-        type: Sequelize.STRING,
-      },
+        defaultValue: Sequelize.fn('now'),
+        type: Sequelize.DATE
+      }
     });
   },
   down: (queryInterface, Sequelize) => {

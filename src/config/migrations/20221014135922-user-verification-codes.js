@@ -26,21 +26,15 @@ module.exports = {
         default: true,
         type: Sequelize.BOOLEAN,
       },
-      created_at: {
+      createdAt: {
         allowNull: false,
+        defaultValue: Sequelize.fn("now"),
         type: Sequelize.DATE,
       },
-      created_by: {
+      updatedAt: {
         allowNull: false,
-        type: Sequelize.STRING,
-      },
-      updated_at: {
-        allowNull: true,
+        defaultValue: Sequelize.fn("now"),
         type: Sequelize.DATE,
-      },
-      updated_by: {
-        allowNull: true,
-        type: Sequelize.STRING,
       },
     });
   },
